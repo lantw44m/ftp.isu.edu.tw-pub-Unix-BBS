@@ -1,0 +1,5 @@
+ColaBBS076w.exe ColaBBS v0.76 build 56  setup package for Windows
+ColaBBS076.zip ColaBBS v0.76 build 56  class only package for Windows
+ColaBBS077aw.exe ColaBBS v0.77a build 57  setup package for Windows
+ColaBBS077a.zip ColaBBS v0.77a build 57  class only package for Windows
+ColaBBS086.zip ColaBBS v0.86 build 235  class only package for Windows

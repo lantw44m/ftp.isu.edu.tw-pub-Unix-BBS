@@ -1,0 +1,137 @@
+
+<!-- banner start -->
+<script language=JavaScript src=http://home.pchome.com.tw/js/banner.js></script>
+<!-- banner end -->
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta http-equiv=Content-Language content=zh-tw>
+<title>MapleBBS 說明文件</title>
+</head>
+
+<body>
+
+<center><table><tr><td><pre>
+
+                       <font color="#008000">★ 多重轉信設定 ★</font>
+
+  <a href='#1'>一、轉入也轉出 (一般看板)</a>
+  <a href='#2'>二、只轉入不轉出</a>
+  <a href='#3'>三、只轉出不轉入</a>
+  <a href='#4'>四、多(newsgroups)對一(board)轉入，一(board)對多(newsgroups)轉出</a>
+  <a href='#5'>五、多(newsgroups)對一(board)轉入，一(board)對一(newsgroups)轉出</a>
+  <a href='#6'>六、一(newsgroup)只轉入一(board)，多(board)對一(newsgroups)轉出</a>
+  <a href='#7'>七、三個以上的BBS站對轉，不透過 news-server</a>
+  <a href='#8'>八、一(newsgroups)對多(board)轉出，一(newsgroups)轉入多(board)</a>
+
+
+    本文件是寫給要安裝 itoc 所維護的 bbs 程式版本所使用的，並不適用
+  其他 bbs 版本。
+
+    以下設定都是改 newsfeeds.bbs 檔，其中
+  N: newsgroup
+  B: board
+  S: server
+  null: 就是 "null" 四個字或任何不在 nodelist.bbs 的 keyword
+  bbsroute: 是 nodelist.bbs 中的 server node
+
+    分隔用空白或 TAB 均可。
+
+  <a name='1'></a>
+  <font color="#000080"><u>一、轉入也轉出 (一般看板)</u></font>
+
+   N    B   S
+
+   Example: tw.bbs.comp.386bsd -> [FreeBSD]
+
+   tw.bbs.comp.386bsd   FreeBSD     bbsroute    big5
+
+  <a name='2'></a>
+  <font color="#000080"><u>二、只轉入不轉出</u></font>
+
+   N    B    null
+
+   Example: tw.bbs.campus -> [campus]
+
+   tw.bbs.campus      campus       null    big5
+
+  <a name='3'></a>
+  <font color="#000080"><u>三、只轉出不轉入</u></font>
+
+  (注意 N 旁邊加上 ','):
+
+   N,   B    S
+
+   Example: [newboards] -> tw.bbs.newgroups
+
+   tw.bbs.newgroups,  newboards    bbsroute    big5
+                  ^^^^
+                  請注意此 "," 必須加上
+
+  <a name='4'></a>
+  <font color="#000080"><u>四、多(newsgroups)對一(board)轉入，一(board)對多(newsgroups)轉出</u></font>
+
+   N1,N2 B S
+   N1 B null
+   N2 B null
+
+   Example: tw.bbs.campus.nctu + nctu.talk -> [nctu]
+            [nctu] -> tw.bbs.campus.nctu + nctu.talk
+
+   tw.bbs.campus.nctu,nctu.talk  nctu    bbsroute    big5
+   tw.bbs.campus.nctu            nctu    null        big5
+   nctu.talk                     nctu    null        big5
+
+  <a name='5'></a>
+  <font color="#000080"><u>五、多(newsgroups)對一(board)轉入，一(board)對一(newsgroups)轉出</u></font>
+
+   N2 B bbsroute
+   N1 B null
+
+   Example: tw.bbs.test + csie.test -> [test]
+                             [test] -> csie.test
+
+   csie.test              test    bbsroute    big5
+   tw.bbs.test            test    null        big5
+
+  <a name='6'></a>
+  <font color="#000080"><u>六、一(newsgroup)只轉入一(board)，多(board)對一(newsgroups)轉出</u></font>
+
+   N, B1 S
+   N  B2 S
+
+   Example: tw.bbs.sci.math     -> [math2]
+            [math1] + [math2]   -> tw.bbs.sci.math
+
+   tw.bbs.sci.math,  math1   bbsroute    big5
+   tw.bbs.sci.math   math2   bbsroute    big5
+
+  <a name='7'></a>
+  <font color="#000080"><u>七、三個以上的BBS站對轉，不透過 news-server</u></font>
+
+   N B S1,S2
+
+  Example:
+
+  bbs.personal.someone   SomeOne   bbsroute1,bbsroute2    big5
+
+  <a name='8'></a>
+  <font color="#000080"><u>八、一(newsgroups)對多(board)轉出，一(newsgroups)轉入多(board)</u></font>
+
+   TODO work, 尚未支援, 可能的寫法如下:
+   N, B1 S
+   N, B2 S
+   N  B1,B2 S
+
+--
+Author: Shih-Kun Huang <a href=mailto:skhuang.bbs@csie.nctu.edu.tw>skhuang.bbs@csie.nctu.edu.tw</a>
+        EC638, CSIE, NCTU, Taiwan, R.O.C. Phone: 886-35-712121 (x54709)
+
+--
+                                                    交大電子 杜宇軒
+                               E-Mail: <a href=mailto:itoc.bbs@bbs.tnfsh.tn.edu.tw>itoc.bbs@bbs.tnfsh.tn.edu.tw</a>
+
+</pre></td></tr></table>
+
+</body>
+</html>

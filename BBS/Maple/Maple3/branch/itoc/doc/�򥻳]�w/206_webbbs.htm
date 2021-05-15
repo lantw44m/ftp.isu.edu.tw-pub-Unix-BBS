@@ -1,0 +1,97 @@
+
+<!-- banner start -->
+<script language=JavaScript src=http://home.pchome.com.tw/js/banner.js></script>
+<!-- banner end -->
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta http-equiv=Content-Language content=zh-tw>
+<title>MapleBBS 說明文件</title>
+</head>
+
+<body>
+
+<center><table><tr><td><pre>
+
+                       <font color="#008000">★ 架設 Web-BBS ★</font>
+
+  <a href='#11'>一、安裝 BBS HTTP daemon -- （Ａ）如果有 inetd</a>
+  <a href='#12'>一、安裝 BBS HTTP daemon -- （Ｂ）如果有 xinetd</a>
+  <a href='#2'>二、享用您自己的 Web-BBS</a>
+
+
+    本文件是寫給要安裝 itoc 所維護的 bbs 程式版本所使用的，並不適用
+  其他 bbs 版本。
+
+    這是一個簡易的 bhttpd Web-BBS，不需裝 apache 及 php，然而其功能
+  也是很簡陋的，只能看公開板文章和精華區、看使用者列表、查詢使用者。
+
+  <a name='11'></a>
+  <font color="#000080"><u>一、安裝 BBS HTTP daemon -- （Ａ）如果有 inetd</u></font>
+
+    以 root 身分登入。
+
+  -root- # <font color="#FF00FF">joe etc/inetd.conf</font>
+           加入以下一行
+
+bhttpd  stream  tcp     nowait  bbs     /home/bbs/bin/bhttpd    bhttpd
+
+  -root- # <font color="#FF00FF">joe etc/services</font>
+           若原本已有 httpd 在 port 80 跑，請取消原先的設定或是換成
+         別的 port。改 80 這個數字為 8080，可以換 port 成 8080，當然
+         您也可以換成別的數字，只是要確定那個 port 沒有其他服務在跑。
+
+bhttpd           80/tcp
+bhttpd           80/udp
+
+  -root- # <font color="#FF00FF">kill -1 `cat /var/run/inetd.pid`</font>
+           以重新啟動 inetd
+
+  <a name='12'></a>
+  <font color="#000080"><u>一、安裝 BBS HTTP daemon -- （Ｂ）如果有 xinetd</u></font>
+
+    如果沒有 /etc/xinetd.d/ 這目錄，那麼很抱歉，bhttpd 只能用 inetd 
+  或 xinetd 來啟動，通常 Linux 應該有 xinetd 才對。
+
+    以 root 身分登入。
+
+  -root- # <font color="#FF00FF">joe /etc/xinetd.d/bhttp</font>
+
+service bhttpd
+{
+        disable         = no
+        flags           = REUSE
+        socket_type     = stream
+        wait            = no
+        user            = bbs
+        server          = /home/bbs/bin/bhttpd
+        server_args     = -i
+}
+
+  -root- # <font color="#FF00FF">joe etc/services</font>
+           若原本已有 httpd 在 port 80 跑，請取消原先的設定或是換成
+         別的 port。改 80 這個數字為 8080，可以換 port 成 8080，當然
+         您也可以換成別的數字，只是要確定那個 port 沒有其他服務在跑。
+
+bhttpd           80/tcp
+bhttpd           80/udp
+
+  -root- # <font color="#FF00FF">service xinetd restart</font>
+           以重新啟動 xinetd
+
+  <a name='2'></a>
+  <font color="#000080"><u>二、享用您自己的 Web-BBS</u></font>
+
+    用瀏覽器連  http://xx.yy.zz             如果您是用 port 80 的話
+                http://xx.yy.zz:8000        如果您是用 port 8000 的話
+
+    其他 xx.yy.zz 為您 BBS 站的 domain name。
+
+--
+                                                    交大電子 杜宇軒
+                               E-Mail: <a href=mailto:itoc.bbs@bbs.tnfsh.tn.edu.tw>itoc.bbs@bbs.tnfsh.tn.edu.tw</a>
+
+</pre></td></tr></table>
+
+</body>
+</html>

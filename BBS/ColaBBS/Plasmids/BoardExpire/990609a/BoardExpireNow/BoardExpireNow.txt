@@ -1,0 +1,16 @@
+
+  BoardExpireNow for ColaBBS(BoardExpire 990609a) 990613
+
+  從 Menu 中啟動 BoardExpire 的功能.
+
+  安裝方法:
+  將 BoardExpireNow.class 複製到 bin\BoardExpire 目錄下, 
+  然後將 ftp 目錄內的 ActivePlasmid.INI 的內容, 加到 bin\ActivePlasmid.INI 內,
+  再將 ftp 目錄內的 MENU.INI 的內容複製到自己 BBS 上的 MENU.INI 中適當的地方.
+  然後重新啟動 BBS 即可.
+
+  使用方法:
+  直接去 Menu 中按下他吧.
+
+                                                         WilliamWey 1999/06/13
+                                                       is85012@cis.nctu.edu.tw

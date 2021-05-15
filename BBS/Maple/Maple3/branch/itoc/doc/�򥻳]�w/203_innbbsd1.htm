@@ -1,0 +1,255 @@
+
+<!-- banner start -->
+<script language=JavaScript src=http://home.pchome.com.tw/js/banner.js></script>
+<!-- banner end -->
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta http-equiv=Content-Language content=zh-tw>
+<title>MapleBBS 說明文件</title>
+</head>
+
+<body>
+
+<center><table><tr><td><pre>
+
+                       <font color="#008000">★ 轉信常見問題 ★</font>
+
+  <a href='#1'>一、基礎設定</a>
+  <a href='#2'>二、常見問題 (FAQ)</a>
+
+
+    目前 MapleBBS 所使用的 innbbsd 程式是從 skhuang@csie.nctu.edu.tw 的
+  innbbsd 0.50beta-4 加上 leeym@cae.ce.ntu.edu.tw 的 NoCeM 0.71，所修改來
+  的，僅適用於 MapleBBS，無法適用其他 BBS 系統。
+
+  <a name='1'></a>
+  <font color="#000080"><u>一、基礎設定</u></font>
+
+  * 設定 src/innbbsd/innbbsconf.h
+
+    #define BBSHOME           "/home/bbs"  /* BBS 的家 */
+    這是 bbs 的家目錄。
+
+    #define DefaultINNBBSPort "7777"    /* innbbsd 預設開在 port 7777 */
+    這是預設開啟的 port。
+
+    #define _NoCeM_                     /* No See Them 擋信機制 */
+    如果不想使用 NoCeM 擋信機制，請 #undef 這項。
+
+    #undef  _KEEP_CANCEL_               /* 保留 cancel 的文章於 deleted 板 */
+    如果想把 cancel 的文章都記錄下來，那麼請 #define 這項。
+
+  * 設定 innd/bbsname.bbs
+
+    bbsname.bbs 裡面請寫上您的英文站名。
+
+
+  * 設定 innd/nodelist.bbs
+
+    允許連線的站台資訊。注意要加入自己的站台。
+
+
+  * 設定 innd/newsfeeds.bbs
+
+    轉信的群組/看板/站台對照列表。
+
+
+  * 設定 innd/ncmperm.bbs
+
+    NoCeM 擋信機制的控制。
+
+
+  * 設定 innd/*.active
+
+    bbsnnrp 對於各個 newsgroup 的 active 檔。
+
+  <a name='2'></a>
+  <font color="#000080"><u>二、常見問題 (FAQ)</u></font>
+
+  (以下所有的 % 開頭的指令，都是以 bbs 身分在 /home/bbs 執行)
+
+
+  * 我要怎麼設定 bbsname.bbs？
+
+    1. 就把自己站台的 node-name 寫入即可，最後無需 Enter 空行。
+    2. 這個 node-name 一定要和 nodelist.bbs 裡面自己的站台資訊那行寫的相同。
+    3. 改完 bbsname.bbs 要重新載入。
+       % innd/ctlinnbbsd reload
+
+
+  * 我要怎麼設定 nodelist.bbs？
+
+    1. nodelist.bbs 的格式如下：
+
+       WOLF            bbs.tnfsh.tn.edu.tw     IHAVE(7777)     與南共舞
+       ^^^^            ^^^^^^^^^^^^^^^^^^^     ^^^^^^^^^^^     ^^^^^^^^
+       node-name       host                    protocol(port)  comment
+       
+    2. node-name 是該站的短名。
+    3. host 是該站的 hostname，可以是 ip/fqdn，即使不是正解，像
+       xxx.twbbs.org 也是被接受的。
+    4. 目前支援的 protocol 有 IHAVE POST DATA 三種。
+    5. port 為對方開的連接埠，一般 BBS 使用 7777，news-server 使用 119
+    6. comment 是註解，隨便要寫什麼，除了自己的站的註解是有用，其他別人的站
+       的註解都是沒用的。
+    7. 空格用 SPACE 或是 TAB 都可以。
+    8. 檔案最後記得要空一行。
+    9. 只有把對方站台的資訊加入 nodelist.bbs 以後，對方才可以 access 我們。
+   10. 要記得把自己的站台資訊加入 nodelist.bbs。其中自己站台的 host 可以是
+       fake 的，這是拿來做 email 用的；而 comment 則會寫入 Organization 欄
+       位，對方站台如果也是 BBS 站的話，會寫在文章的檔頭。
+   11. 改完 nodelist.bbs 要重新載入。
+       % innd/ctlinnbbsd reload
+
+
+  * 我要怎麼設定 newsfeeds.bbs？
+
+    1. newsfeeds.bbs 的格式如下：
+
+       nthu.cs.bbs.plan                plan            Maple        big5
+       ^^^^^^^^^^^^^^^^                ^^^^            ^^^^^        ^^^^
+       newsgroup                       board           node-name    charset
+
+    2. 如果是和 BBS 轉信的話，那麼 newsgroup 可以隨便取，只要二站都取相同就
+       可以了；如果是和 news-server 轉信的話，請和 news-server 取成相同。
+    3. board 指定要轉進我們站上的哪個看板。
+    4. node-name 指定要轉出 nodelist.bbs 中哪個站台。
+    5. charset 可指定 big5 或是 gb2312 或是 us-ascii 等各式各樣的編碼。
+    6. 空格用 SPACE 或是 TAB 都可以。
+    7. 檔案最後記得要空一行。
+    8. 改完 newsfeeds.bbs 要重新載入。
+       % innd/ctlinnbbsd reload
+
+
+  * 我要怎麼設定 ncmperm.bbs？
+
+    1. ncmperm.bbs 的格式如下：
+
+       news@news.math.nctu.edu.tw      power           yes
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^      ^^^^^           ^^^
+       issuer                          type            perm
+
+    2. issuer 是發 NCM notice 者。
+    3. 同一個 issuer 可以發好幾個 type 的 NCM notice。
+    4. perm 如果是 yes，那麼就是允許這個 notice 砍信；perm 如果是 no，那麼
+       就不允許這個 notice 砍信。
+    5. 空格用 SPACE 或是 TAB 都可以。
+    6. 檔案最後記得要空一行。
+    7. 如果有新增的 NoCeM issuer/type 的話，程式會自動把 ncmperm.bbs 加入
+       ncmperm.bbs，預設是 no perm，如果站長要開啟接受這個 notice，要把
+       perm 改成 yes。
+    8. 改完 ncmperm.bbs 要重新載入。
+       % innd/ctlinnbbsd reload
+
+
+  * 我要怎麼設定第一次的 active 檔？
+
+    1. active 檔格式是像這樣子的：
+
+       tw.bbs.test 0000000000 0000000001 y
+       ^^^^^^^^^^^ ^^^^^^^^^^ ^^^^^^^^^^
+       newsgroup   high-number low-number
+
+    2. newsgroup 請和 news-server 上的相同。
+    3. high-number 和 low-number 請留十個 digit。
+    4. 最後那個 y 是沒有用的，保留給以後使用。
+    5. 空格用 SPACE 或是 TAB 都可以。
+    6. 檔案最後記得要空一行。
+    7. 然後執行以下，就會把 active-file 這個檔的 high/low number 更新。
+       % innd/bbsnnrp -c news-server innd/active-file
+
+
+  * 我要怎麼得知 news-server 上有什麼 newsgroup？
+
+    % telnet news.cs.nthu.edu.tw 119 > file
+    list
+    quit
+
+    那麼在 file 這個檔案裡面就記錄了 bbs.cs.nthu.edu.tw 這個 news-server
+    上的所有 newsgroup 了，而其格式和 active 檔也是相同。
+
+
+  * 如何一次取許多信？
+
+    bbsnnrp 取代一次只取 100 封信，如果要取超過 100 封的話，請使用 -a
+    這個參數。當然大量讀取時必須禮貌地徵求 news-server 同意。
+    % innd/bbsnnrp -a 500 news-server innd/active-file
+
+
+  * 如果取過去的信？
+
+    bbsnnrp 取過的信會將 Message-ID 記錄在 history 檔中，這是為了避免同一封
+    信被重覆收取。如果您想收過去已經取過的信，那麼請先修改 active-file 中的
+    high-number (將這數字變小，至於要減小多少，取決於您要收幾封過去的信)，
+    然後使用 -n 這個參數。
+
+    1. 首先執行以下，就會把 active-file 這個檔的 high/low number 更新。
+       % innd/bbsnnrp -c news-server innd/active-file
+
+    2. 其次改 active 檔。
+
+       tw.bbs.test 0000016543 0000016543 y
+                   ^^^^^^^^^^ ^^^^^^^^^^
+               目前抓到第幾封  news上面有幾封信
+
+       如果想要抓前一千封信，就改成
+
+       tw.bbs.test 0000015543 0000016543 y
+                   ^^^^^^^^^^ ^^^^^^^^^^
+               這個數字減一千
+
+    3. 然後執行以下，就會一次抓 1000 封。
+       % innd/bbsnnrp -a 1000 -n news-server innd/active-file
+
+
+  * 無法 BBS 站對轉？
+
+    大部分 BBS 對轉失敗的原因，都是因為對方沒有把您加入 nodelist.bbs，
+    請試著連對方 BBS 站的 innbbsd port，例如：
+    % telnet bbs.tnfsh.tn.edu.tw 7777
+    如果出現這樣的訊息：502 You are not in my access file nodelist.bbs，
+    那麼請對方的站長把您加入 nodelist.bbs。
+
+    甲站和乙站二個 BBS 站對轉，甲站上可以看到乙站的信，乙站上不能看到甲站的
+    信，那麼出問題的是甲站，不是乙站。
+
+    您也可以在 bbslink 加參數 -v，來秀出詳細的訊息，看是卡在哪裡。
+    % innd/bbslink -v
+
+
+  * 無法跟 news-server 取信？
+
+    大部分和 news-server 轉信失敗的原因，都是因為您在那 news-server 沒有權
+    限，請試著連對方 news-server 的 innd port，例如：
+    % telnet news.cs.nthu.edu.tw 119
+    如果沒有出現 (posting ok) 的訊息，代表您沒有在那機器 post 的權限。
+
+    您也可以在 bbsnnrp 加參數 -v，來秀出詳細的訊息，看是卡在哪裡。
+    % innd/bbsnnrp -v news-server innd/active-file
+
+
+  * 如果想 shutdown innbbsd 的話，怎麼做？
+
+    % innd/ctlinnbbsd shutdown
+    或是
+    % kill `tail -1 run/innbbsd-7777.pid | awk '{print $$1}'`
+    都可以，別用 kill -9 就是了。
+
+
+  * 如何把站上的舊信再送出去一次？
+
+    % bin/outgo 看板 起點 終點
+    看板就是要轉出的看板英文名。
+    起點、終點就是指定從第幾篇文章轉到第幾篇文章。
+    這樣就會把看板的文章再加到 innd/out.bntp，如此 bbslink 就會把信再送一
+    遍。
+
+--
+                                                    交大電子 杜宇軒
+                               E-Mail: <a href=mailto:itoc.bbs@bbs.tnfsh.tn.edu.tw>itoc.bbs@bbs.tnfsh.tn.edu.tw</a>
+
+</pre></td></tr></table>
+
+</body>
+</html>

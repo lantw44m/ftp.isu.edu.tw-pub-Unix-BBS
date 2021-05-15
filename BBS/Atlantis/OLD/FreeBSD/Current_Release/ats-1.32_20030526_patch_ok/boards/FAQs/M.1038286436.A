@@ -1,0 +1,95 @@
+§@ªÌ: aoki (±µ°e±M¨®ªA°È¤¤) ¬ÝªO: FAQs
+¼ÐÃD: ATS 1.31 »PATS1.32¤ñ¸û
+®É¶¡: Tue Nov 26 04:53:55 2002
+
+±q131_s1¤§«ábug­×¥¿¤Î·s¼Wªº¥\¯à¦p¤U(ÁÙ¦³·s¼Wªº¤u¨ã)
+
+bug­×¥¿
+ 1.FB Âà ATS «á¤å³¹¤@Äý¤@°ï©Ç²Å¸¹        (¨È¯¸ATSVersionªO ²Ä328½g)
+ 2.ÂIºq¾÷¹J¨ìªÅ¦æ·|¥X¿ù                  (¨È¯¸ATSVersionªO ²Ä334½g)
+ 3.SYSOP ¤£¬O²á¤Ñ«Ç OP                   (¨È¯¸ATSVersionªO ²Ä358½g)
+ 4.±ÀÂË¤å³¹¦p¹J¹Lªø¬ÝªO·|Â_½u            (¨È¯¸ATSVersionªO ²Ä359½g)
+ 5.¨Ï¥Î mbbsd ®ÉXX¤@ÄýªºÅã¥Ü¤@­±¥u¦³19¦æ (¨È¯¸ATSVersionªO ²Ä361½g)
+ 6.°ÊºA¬ÝªO ¦Û°ÊÅã¥Ü®É·|§â²Ä¤@­Ó¿ï¶µ»\±¼ (¨È¯¸ATSVersionªO ²Ä362½g)
+ 7.¨Ï¥Î°ÊºA¶i¯¸«á ¤Á´«¯¸¥x·|µLªkÅã¥Ü¶i¯¸ (¨È¯¸ATSVersionªO ²Ä363½g)
+ 8.Á×§K guest ¨Ï¥Î¼È¦sÀÉ                 (¨È¯¸ATSVersionªO ²Ä367½g)
+ 9.¤À¯¸ªø§Q¥Î§Úªº³Ì·R¬Ý¨£©Ò¦³ªO          (¨È¯¸ATSVersionªO ²Ä368½g)
+10.zbbsd.c ­×²z¯¸¥x³qª¾¿ù»~              (¨È¯¸ATSVersionªO ²Ä390½g)
+11.guest µLªk¦b SYSOP ªO¤W­×§ï¤å³¹       (¨È¯¸ATSVersionªO ²Ä402½g)
+12.¶}·s¬ÝªOªº§PÂ_¿ù»~                    (¨È¯¸ATSVersionªO ²Ä406½g)
+13.Áp¸pµ{¦¡ºûÅ@³¡¥÷¿ù»~                  (¨È¯¸ATSVersionªO ²Ä414½g)
+14.undef IDLE_TIMEOUT ¤§¿ù»~             (¨È¯¸ATSVersionªO ²Ä415½g)
+15.help ²¾¦ì                             (¨È¯¸ATSVersionªO ²Ä421½g)
+16.¾\¤å¦C¤£°÷ªø¬Ý°_¨Ó¤£¾ã»ô              (¨È¯¸ATSVersionªO ²Ä422½g)
+17.§Úªº³Ì·RµLªk¥¿½T¼g¤J¤À¯¸¤ÀÃþ          (¨È¯¸ATSVersionªO ²Ä429½g)
+18.¦h­«µn¿ý¤£¯àÂIºq                      (¨È¯¸ATSVersionªO ²Ä438½g)
+19.Á×§K¦]¬ÝªO¦W¿ù»~³y¦¨»~¬å¾ã­Ó boards   (¨È¯¸ATSVersionªO ²Ä463½g)
+20.µo¤å¤ÀÃþ³ß¦n³]©w mask ¼Æ­È¿ù»~        (¨È¯¸ATSVersionªO ²Ä468½g)
+21.sob2ats131.c Âà´«µ{¦¡ªº¿ù»~           (¨È¯¸ATSVersionªO ²Ä494½g)
+22.¥D¼ÐÃDÄæªº¬ÝªOÃC¦â¬O·tªº              (¨È¯¸ATSVersionªO ²Ä495½g)
+23.COLA BBS¬ÝªOª½±µ«þ¨©¦³°ÝÃD            (¨È¯¸ATSVersionªO ²Ä496½g)
+24.ÂIºq/¦ê¦C¬d¸ß¤@¦¸¤£­n¨º»ò¦h           (¨È¯¸ATSVersionªO ²Ä504½g)
+25.h_mandex °j°é¿ù»~                     (¨È¯¸ATSVersionªO ²Ä505½g)
+26.³æ¯¸®É¤ß±¡Åã¥Üªº¦a¤è¤@­±ªÅ¥Õ          (¨È¯¸ATSVersionªO ²Ä508½g)
+27.¯¸¥x°ðµLªk¥¿½T¹ïÀ³ MBBSD ¹w³]         (¨È¯¸ATSVersionªO ²Ä509½g)
+28.¤@¯ë¨Ï¥ÎªÌÂà¿ý®É ¤£¯à«O¯d­ì§@ªÌ ID    (¨È¯¸ATSVersionªO ²Ä512½g)
+29.¶i¤J¶iªO¯µ±K¬ÝªOµLªkµo¤å              (¨È¯¸ATSVersionªO ²Ä513½g)
+30.¤À¯¸ªøµLªk¨Ï¥Î 'X'                    (¨È¯¸ATSVersionªO ²Ä515½g)
+31.´£³øÅÜ¼Æ¨Ï¥Î¿ù»~                      (¨È¯¸ATSVersionªO ²Ä520½g)
+32.«ÕÆF¤ô²y¶Ç»¡                          (¨È¯¸ATSVersionªO ²Ä556½g)
+33.struct.h ¤¤©w¸q¿ù»~                   (¨È¯¸ATSVersionªO ²Ä562½g)
+34.Åv­­¤Á³Îªº´X­Ó¿ù»~»P§ó·s              (¨È¯¸ATSVersionªO ²Ä565½g)
+35.ges_msg() stat ¿ù»~                   (¨È¯¸ATSVersionªO ²Ä571½g)
+
+
+·s¼W¥\¯à»P­×§ï¤§patch
+ 1.µo¤å«á¤å³¹¼Æ¥ß¨è°O¤J .PASSWDS ¤¤      (¨È¯¸ATSVersionªO ²Ä364½g)
+ 2.¼Ð°O±ý§R°£¤å³¹,¥i¼Ð°O¦P§@ªÌ©Î¦P¥DÃD   (¨È¯¸ATSVersionªO ²Ä366½g)
+ 3.·j´MÂIºq®É¥i¥H§Y®É¦^°T                (¨È¯¸ATSVersionªO ²Ä368½g)
+ 4.½u¤W§ó§ï¤ß±¡ª¬ºA                      (¨È¯¸ATSVersionªO ²Ä369½g)
+ 5.ÂIºq¥\¯à­­©w¤@ÂIÂI¼½ºq¦±¼Æ            (¨È¯¸ATSVersionªO ²Ä384½g)
+ 6.¨Ï¥Î (µù¥U¤H­û¤@Äý)                   (¨È¯¸ATSVersionªO ²Ä397½g)
+ 7.§â­Ó¤HÀÉ®×(¦W¤ù/Ã±¦W/¤W½u)¦XµÛ¥Î      (¨È¯¸ATSVersionªO ²Ä400½g)
+ 8.ÂX¥R¤W¦¸¤W¯¸¬°³Ì¤jªø«× 79             (¨È¯¸ATSVersionªO ²Ä401½g)
+ 9.¨Ï¥Î¦h¯¸¦A¥[¤ß±¡                      (¨È¯¸ATSVersionªO ²Ä484½g)
+10."ÄY®æ" ¨Çªº¨t²ÎºÞ¨î                   (¨È¯¸ATSVersionªO ²Ä499½g)
+11.ÁôÂÃ¤W¯¸¨Ó·½¤@­P¤Æ                    (¨È¯¸ATSVersionªO ²Ä511½g)
+12.µ{¦¡´îªÎ                              (¨È¯¸ATSVersionªO ²Ä518½g)
+13.¥i¦Û¥ÑÅÜ§ó¨Ï¥ÎªÌ«H½c¤§¤W­­            (¨È¯¸ATSVersionªO ²Ä522½g)
+14.¬ÝªO¾\Åª°O¿ý±Æ§Ç                      (¨È¯¸ATSVersionªO ²Ä529½g)
+15.²á¤Ñ«Ç»P¨Ï¥ÎªÌ¹ï½Í®É¨Ï¥ÎCtrl('G')     (¨È¯¸ATSVersionªO ²Ä530½g)
+16.°ÊºA¤p¬ÝªO¤À¯¸»PºûÅ@¤¶­±              (¨È¯¸ATSVersionªO ²Ä539½g)
+17.¯¸¥xÅv­­¤Á³Î                          (¨È¯¸ATSVersionªO ²Ä540½g)
+18.¯¸ªø Query Åã¥Ü¯u¹ê¨Ó·½               (¨È¯¸ATSVersionªO ²Ä542½g)
+19.¨Ï¥ÎªÌ¥i¥H§ï¬G¶m¨Ó·½                  (¨È¯¸ATSVersionªO ²Ä544½g)
+20.¤W½uÀË¬d©Ê§O                          (¨È¯¸ATSVersionªO ²Ä546½g)
+21.Âà´«¬G¶m¨Ï¥ÎÀÉ®×                      (¨È¯¸ATSVersionªO ²Ä553½g)
+22.¦h­«¤ô²y Ctrl+R                       (¨È¯¸ATSVersionªO ²Ä560½g)
+23.«Ø¥ßAllPostªO¬Ý©Ò¦³·sµoªí¤å³¹         (¨È¯¸ATSVersionªO ²Ä563½g)
+24.(Ctrl+R)^2¦^¤ô²y                      (¨È¯¸ATSVersionªO ²Ä566½g)
+25.Ä~Äò¨Ï¥Î³æ¯¸¨Ï¥Î­×§ï¸s²Õ¤ÀÃþ          (¨È¯¸ATSVersionªO ²Ä568½g)
+26.¨Ï¥Î (Ctrl+R) ¦^ÅU¤U ³ß¦n¿ï¶µ         (¨È¯¸ATSVersionªO ²Ä573½g)
+27.config.h ¨ç¦¡²Î¤@                     (¨È¯¸ATSVersionªO ²Ä579½g)
+
+
+¨ä¥L
+ 1.stuff.c ªº¤@¨Ç¤p·h®a                  (¨È¯¸ATSVersionªO ²Ä570½g)
+
+
+·s¼W¤u¨ã
+ 1.½u¤W³Ì¤j¤H¦¸²Î­p                      (¨È¯¸ATSVersionªO ²Ä376½g)
+ 2.ÀË¬d¬ÝªOÅv­­                          (¨È¯¸ATSVersionªO ²Ä500½g)
+ 3.³æ/¦h¯¸ Âà´«µ{¦¡                      (¨È¯¸ATSVersionªO ²Ä501½g)
+
+
+¥H¤W©Ò¦³¬ÛÃöªºpatch¬Ò¦b¨È¯¸(ats.twbbs.org:23)ªºATSVersionªO¤º
+¦³bug¥i¥H¥ý¨ì¸ÓªO¬d¾\,©ÎµÛ¦b¸ÓªO§iª¾bug¦s¦b,·í§A¦bpatchªº®É­Ô
+¥i¥H¥H·j´M¤è¦¡©Ò¦³¬ÛÃö¼ÐÃD¤§¤å³¹¨Ó¶i¦æpatch,­Y¦³¦Û¤v·Q­×§ïªº¦a¤è
+Åý¯¸ÅÜ±o§ó¦³¦Û¤vªºstyle¥i¥H°Ñ¦Ò¨È¯¸FAQsªOºëµØ°Ï¡C
+
+--
+Ä±±o§Ú¤å³¹¼gªº¤£¿ùªº
+½Ð½à­Ógy§a...^_^
+
+--
+¡° [mOrigin: [1;31;40mATLANTIS[m  DN: [1;32;40mats.twbbs.org[m  IP: [1;33;40m140.129.66.189[m  ST: [1;34;40matlantis       [m

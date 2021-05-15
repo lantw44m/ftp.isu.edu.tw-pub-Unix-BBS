@@ -1,0 +1,5 @@
+ps -aux | awk '$11=="bbs" {print $2}' | xargs kill -9
+ipcrm -M 1215
+ipcrm -M 1217
+ipcrm -M 1219
+~bbsrs/bin/repasswd

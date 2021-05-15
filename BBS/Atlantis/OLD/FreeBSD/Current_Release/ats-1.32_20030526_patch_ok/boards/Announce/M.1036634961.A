@@ -1,0 +1,167 @@
+§@ªÌ: Dopin (1.31-Stable ±µªñ§¹¤u) ¬ÝªO: ATSVersion
+¼ÐÃD: ATS 1.32 Alpha Release
+®É¶¡: Wed Nov  6 20:08:49 2002
+
+ªì¦¸ÄÀ¥Xª© CVS Code : [1;37;46mATS_1.32A_00-200211061600[m
+
+                                   [1;37;45m¥»ª©»¡©ú[m
+
+¤¶©w ¬° alpha ª© ³Ì¤jªº­ì¦]°£¤F­×§ï«D±`¦h¥H¥~ ¦A¨Ó´N¬O³oª©§Æ±æ¯à¥[±jªº¤å¥ó³¡¥÷
+¥u§¹¦¨¤F 15% ¥ª¥k¶i«× ¤@¶µ¶µ¼g¤@¼Ë¼ËÂà ¹ê¦b®¼ªá®É¶¡ §Æ±æ¥H«á¤å¥ó¤]¥i¥H¥Î patch
+ªº¤è¦¡¤@¼Ë¼Ë¥[¤W¥h ¥t¥~¦]¬°¥u¦³ src/util src/maple ¤U­±ªºÀÉ®×§ó·s ©Ò¥H¦pªG¦¹¥Î
+for cola (ats-1.31s_cola.tar.gz) Âà´« ¥i¥H§ì 1.31 ªºª©¥»¦^¥h ¦A patch ¥»ª©¥»¤¤
+src ¥Ø¿ý¤U­±ªº´N¥i¥H¤F
+
+1.32 ¤ñ¸û 1.31 §Ú·Q¬[ºc¤j¦P¤p²§ ¦ýÃö©ó­×§ïªº³¡¥÷ ¤j·§¬O³Ì¤jªº§´¨ó§a ©Ò¦³¥D­nªº
+¤½§i patch »P­×§ï§Ú³q³q¥[¤W¥h¤F ¤]³]©w¤F¥¨¶°©w¸q¹ïÀ³ ¥H¤U´N patch ³¡¥÷»P¥¨¶°³¡
+¥÷»¡©ú ¥t¥~¤S·s¼W¤F¤@­Ó leeym.c ¥H«á¥´ºâ§â Leeym ¥S¼gªº¤@¨Ç¦n patch ³£¥[¶i¥h
+
+                                   [1;37;43mpatch ³¡¥÷[m
+
+298   10/10  Dopin       ¡¼ patch -- "¤â°Ê" µo©ñ©T©wÁ~¸ê
+¥i³]©w©T©wÁ~¸ê¦W³æ
+303   10/16  Dopin       ¡¼ patch -- µ{¦¡©w¸q¿ù»~
+¶È¬O¥¨¶°©w¸q­×¥¿
+307   10/20  Dopin       ¡¼ patch -- zbbsd ¤£¨Ï¥Î¦h¯¸¨t²Î
+¥iª½±µ¶i¤J zbbsd.c §Q¥Î©w¸q­×§ï¬O§_¤ä´©¦h¯¸¨t²Î
+310   10/23  Dopin       ¡¼ patch -- ¿ï¾Ü©Ê°Î¦W¬ÝªO¥¼§¹¾ã patch
+Á×§K°Î¦WªO­×§ï¤´·|¸ß°Ýªº¿ù»~
+312   10/23  Dopin       ¡¼ patch -- ³]©w¤£©wÂI³ø®É·|¥X²{«ÕÆF°T®§
+´î¤Ö mbbsd µo¥Í«ÕÆF°T®§ªºª¬ªp
+313   10/23  Dopin       ¡¼ patch -- §c µ§»~¶Ü QQ?
+§R°£¨S¦³¨Ï¥ÎªºÅÜ¼Æ«Å§i
+314   10/23  Dopin       ¡¼ patch -- ¨Ï¥Î¬ÝªOÁ`ºÞ»P±b¸¹Á`ºÞªº¥\¯à
+322   10/24  Dopin       ¡¼ patch -- ¨Ï¥ÎªÌµLªk§ï¦Û¤v¸ê®Æ»P±K½X QQ
+¬ÝªOÁ`ºÞ»P±b¸¹Á`ºÞ§¹¾ãªº patch
+320   10/24  Dopin       ¡¼ patch -- °ÊºA¶i¯¸¬ÝªO §ó "°ÊºA" ÂI
+¼W¥[°ÊºA¶i¯¸ªº¶Ã«×
+321   10/24  Dopin       ¡¼ patch -- ¨Ï¥ÎªÌ¤@Äý¤£¯à½ð¤H ??!!
+Åý SYSOP ¥i¥H¥¿½Tªº¦b¨Ï¥ÎªÌ¦W³æ½ð¤H¤U½u
+328   10/25  Dopin       ¡¼ patch -- FB Âà ATS «á¤å³¹¤@Äý¤@°ï©Ç²Å¸¹ ?
+°£­×§ï fb2ats131.c ¥~ ¤]¥[¤J¤F¦¹¨ç¦¡©ó src/util ¤¤
+334   10/27  Dopin       ¡¼ [±`¨£°ÝÃD] §ÚªºÂIºq¾÷·|µo¥ÍµLªk¥¿½TÂIºqªºª¬ªp
+­×¥¿ do_choice_song ¤¤¤£º¡¤­¦æ³y¦¨Åã¥Ü¿ù»~
+351   10/29  Dopin       ¡¼ ...¯u¬O¦Û¥´¼L¤Ú QQ;;;
+­×¥¿¨S¦³²Å¸¹¤u¨ã³ß¦n³]©wªº¿ù»~
+358   10/30  Dopin       ¡¼ patch -- SYSOP ¤£¬O²á¤Ñ«Ç OP ?!
+Åý SUPERVISOER ¥i¥H¥¿½Tªº°õ¦æ²á¤Ñ¬OºÞ²z¥\¯à
+359   10/30  Dopin       ¡¼ patch -- ±ÀÂË¤å³¹¦p¹J¹Lªø¬ÝªO·|Â_½u
+­×¥¿ÅÜ¼Æ«Å§i¤£°÷¤j³y¦¨¸ê®Æ·¸¦ìªº°ÝÃD
+361   10/30  Dopin       ¡¼ patch -- ¨Ï¥Î mbbsd ®É XX¤@ÄýªºÅã¥Ü¤@­±¥u¦³ 19 ¦æ
+»P zbbsd.c ¦P¨B§ï¦¨ 20 ¦æ
+362 ME10/30  Dopin       ¡¼ [°ÝÃD]  §Úªº°ÊºA¬ÝªO ¦Û°ÊÅã¥Ü®É·|§â²Ä¤@­Ó¿ï¶µ»\±¼
+§Q¥Î­×§ï§Úªº³Ì·R³¡¥÷ Åý¿ï¶µ´î¤Ö
+366   10/31  Dopin       ¡¼ patch -- ¼Ð°O¦P §@ªÌ/¼ÐÃD ¤å³¹
+ÅýªO¥D¥i¥H¿ï¾Ü¼Ð°O ¦P §@ªÌ/¼ÐÃD
+367   10/31  Dopin       ¡¼ patch -- Á×§K guest ¨Ï¥Î¼È¦sÀÉ
+­×¥¿ guest ¥i¥H§Q¥Î¼È¦sÀÉ®ø¯Ó¨t²Î¸ê·½ªº°ÝÃD
+368   10/31  Dopin       ¡¼ patch -- ·j´MÂIºq®É¥i¥H§Y®É¦^°T
+¥u¬O¥[¤J­Ó Ctrl+R §PÂ_
+369   11/01  Dopin       ¡¼ patch -- ½u¤W§ó§ï¤ß±¡ª¬ºA
+³æ¯¸¥x¨Ï¥ÎªÌ¥i¥H¦b¨Ï¥ÎªÌ¤@Äý¤¤§ï¦Û¤vªº¤ß±¡ª¬ºA
+370   11/01  Dopin       R: patch -- ³s¸p¤é´Á§PÂ_¿ù»~ Q_Q;;;
+375   11/01  Dopin       ¡¼ [°ÝÃD] §ì³Ì·sªº agree.tar.gz ¦^¥h make ¿ù»~
+±N³s¸p¨t²Î¥\¯à¥[±j ¨Ã¥i¥¿½T§PÂ_¤é´Á
+376   11/01  Dopin       ¡¼ [¤u¨ãµ{¦¡] ½u¤W³Ì¤j¤H¦¸²Î­p
+­ì§@ªÌ Leeym ¥i¥H°O¿ý³Ì°ª¤W½u¤H¦¸
+384   11/02  Dopin       ¡¼ patch -- ÂIºq¥\¯à­­©w¤@ÂIÂI¼½ºq¦±¼Æ
+¥iÁ×§K¦P¤@¨Ï¥ÎªÌÂIºq¹L¦h
+387   11/03  Dopin       ¡¼ [¤å¥ó] Ãö©ó¯µ±K¬ÝªO
+­×¥¿ªO¥DµLªk½s¯µ±K¶iªO­ì«h ¨Ã§ó·s¨D§U¿ï³æ
+388   11/03  Dopin       ¡¼ patch -- ¤À¯¸ªø§Q¥Î§Úªº³Ì·R¬Ý¨£©Ò¦³ªO
+Á×§K¤À¯¸ªø§Q¥Î¦¹ bug ¬Ý¨ì¤£¸Ó¬Ýªº¬ÝªO
+390   11/04  Dopin       ¡¼ patch -- zbbsd.c ­×²z¯¸¥x³qª¾¿ù»~
+­×¥¿ÅÜ¼Æ©w¸q¿ù»~
+397   11/05  Dopin       ¡¼ patch -- ¨Ï¥Î (µù¥U¤H­û¤@Äý)
+¥i¨Ï¥Îµù¥U¤H­û¤@Äý
+400   11/06  Dopin       ¡¼ patch -- §â­Ó¤HÀÉ®×(¦W¤ù/Ã±¦W/¤W½u)¦XµÛ¥Î
+¸Ñ¨M­Ó¤H³]©w°ÏÄæ¦ì¤£°÷ªº°ÝÃD
+401   11/06  Dopin       ¡¼ patch -- ÂX¥R¤W¦¸¤W¯¸¬°³Ì¤jªø«× 79
+Åý¨Ï¥ÎªÌ¨Ó·½¥i¥H¥¿½T°O¿ý
+406   11/06  Dopin       ¡¼ patch -- ¶}·s¬ÝªOªº§PÂ_¿ù»~
+­×¥¿ÅÜ¼Æ³]©w¿ù»~
+
+                                   [1;37;41m­×§ï³¡¥÷[m
+
+  1    9/19  Dopin       ¡¼ ­×§ï -- §Ú·QÅý§Úªº¨Ï¥ÎªÌ¤@Äý¥i¥HÅã¥Ü¨Ó·½
+¥i¥HÅã¥Ü¬G¶m ¤]¥i¥H°õ¦æÂà´«
+  3    9/20  Dopin       ¡¼ ­×§ï -- §Ú·Q­n§ï¹³ WD ©M¨È¯¸²{¦bªº°ÊºA¤p¬ÝªO
+¥i¿ï¾Ü¬O§_¨Ï¥Î°ÊºA¤p¬ÝªO
+  5    9/20  Dopin       ¡¼ ­×§ï -- §Ú§Æ±æ¥i¥H¦³¦p­·¤ë¬P¨º¼Ëªº¦h¦â¼ÐÃDÄæ
+¥i¨Ï¥Î¤W¤U¥iÅÜ¦âªº¼ÐÃDÄæ¦ì
+  6    9/20  Dopin       ¡¼ ­×§ï -- ¨ä¥L¤@¨Ç§Ú¤£¤Ó·Q¼gªº ...(ÁÙ¬O»¡­ì²z§a)
+¦r§Î´å¼Ð / ±m¦â¬ÝªO¤ÀÃþ
+  8    9/26  Dopin       ¡¼ ­×§ï -- ¤U½u³qª¾
+¨Ï¥Î¤U½u³qª¾
+  9   10/01  Dopin       ¡¼ ­×§ï -- ¦p¦óÅýµo¤å´Nµ¹¿ú
+Åýµo¤å´N°Oª÷ÃB ÄÝ¹êÅç©Ê½è­×§ï
+ 10   10/31  Dopin       ¡¼ ­×§ï -- µo¤å«á¤å³¹¼Æ¥ß¨è°O¤J .PASSWDS ¤¤
+Åýµo¤å®Éª½±µ¼g¤J¨t²ÎÀÉ¤¤ Á×§K§ó·s¤£¦P¨B
+402   11/06  Dopin       ¡¼ ­×§ï -- guest ³ßÅw¦b SYSOP ¶Ã©ñ¬¶ ?
+¥[¤J¨Ó·½Åã¥Ü ¨Ã°O¿ý®É¶¡
+
+                                   [1;37;44m¨ä¥L³¡¥÷[m
+
+¯µ±K¬ÝªO / ¶iªO¯µ±K / ¶iªO¯µ±K¥Ó½Ð ÃC¦âªº¥¿½TÅã¥Ü
+
+                         [1;37;42mconfig.h ¤§ÅÜ§ó[m (¾ã²z¥X¨Ó ¨Ã©w¸q¿ï¶µ)
+
+/* ----------------------------------------------------- */
+/* ¯¸¥x°ò¥»³]©w                     Atlantis BBS 1.31-S1 */
+/* ----------------------------------------------------- */
+
+#define DEFAULTST      "atlantis"  /* ©w¸q¹w³]¯¸¥x¦WºÙ */
+#define DEFAULTBOARD   "Announce"  /* ¹w³]¬ÝªO */
+
+#define KEEPWD1        "ats"       /* ©w¸q¯¸¤W Anonymous ¨t²Î±b¸¹ */
+#define KEEPWD2        "atlantis"  /* ¦P¤W ¦¹¨â±b¸¹¥u¥i§ó§ï¤£¥i§R°£ */
+
+#define SHOW_FROMHOST              /* ¨Ï¥ÎªÌ¤@ÄýÅã¥Ü¬G¶m¨Ó·½ */
+  #ifdef SHOW_FROMHOST
+    #define TRANS_FROMHOST         /* ¬G¶mÂà´«¥\¯à §@ªÌ buggy/Izero (zoo) */
+  #endif                           /* §ó·sªÌ Eros/LAW (hcu)
+
+#define USE_LITTLE_NOTE            /* ¨Ï¥Î°ÊºA¤p¬ÝªO */
+#ifdef USE_LITTLE_NOTE
+  #define SN_NUM 5                 /* °ÊºA¤p¬ÝªO¼Æ¶q ½Ð¨Ì¹ê»Úª¬ªp½Õ¾ã */
+#endif
+#define USE_MULTI_TITLE            /* ¨Ï¥ÎÀH¾÷¼ÐÃD¦C */
+#define USE_SQ_CURSOR              /* ¨Ï¥Î´`§Ç´å¼Ð */
+#ifdef USE_SQ_CURSOR
+  #define CURS_STRING "¨È¯SÄõ´£´µ" /* ½Ð¨Ì»Ý­nÅÜ§ó */
+  #define CURS_STR_NUM 10          /* ½Ð¹ï·Ó CURSOR_STRING ¼Æ¥Ø¬°¥b§ÎÁ`¼Æ */
+#endif
+
+/* ----------------------------------------------------- */
+/* ¯¸¥xºÞ²z­ì«h                     Atlantis BBS 1.31-S1 */
+/* ----------------------------------------------------- */
+
+#define SYSOP_CAN_LOGIN            /* ¬O§_¤¹³\ SYSOP ¥Ñµn¤J */
+#define SUPERVISOR      "SYSOP"    /* ©w¸q¶W¯Å¨Ï¥ÎªÌ ³\¦h¥\¯à¶È¦¹ ID ¥i°õ¦æ */
+#define SYSOP_ONLY_DEFAULTST       /* ©w¸q¥u¦³¨ã SYSOP Åv­­ªÌ¬°¹w³]¯¸¥x¯¸ªø */
+
+#define USE_ACCOUNTS_PERM          /* ©w¸q¨Ï¥Î PERM_ACCOUNTS (±b¸¹Á`ºÞ)¥\¯à */
+#define USE_BOARDS_MANAGER         /* ©w¸q¨Ï¥Î PERM_EXTRA1 (¬ÝªOÁ`ºÞ)¥\¯à   */
+
+#define MAIL_TO_SYSOP              /* ©w¸q¨Ï¥ÎªÌ¥i¥H±H«Hµ¹ SYSOP ±b¸¹ */
+
+/* ----------------------------------------------------- */
+/* ¯¸¥xÂø¶µ¥\¯à³]©w                 Atlantis BBS 1.32-A0 */
+/* ----------------------------------------------------- */
+
+#define MultiIssue            /* ¨Ï¥Î¶Ã¼Æ¶i¯¸µe­± */
+#define ColorClass            /* ¨Ï¥Î±m¦â¬ÝªO¤ÀÃþ */
+
+#undef  UPDATE_WHEN_POST      /* µo¤å«á§Y§â¨Ï¥ÎªÌ¤å³¹¼Æ¥Ø¼g¤J .PASSWDS */
+#ifdef UPDATE_WHEN_POST
+  #undef COUNT_MONEY_WHEN_POST /* µo¤å«á´Nµo¿ú */
+#endif
+
+#define REC_ALL_FROM          /* °O¿ý©Ò¦³¨Ï¥ÎªÌ¤W¯¸¨Ó·½ ¥¼³q¹L»{ÃÒµo¤åÅã¥Ü */
+#undef  COUNT_PERSONAL        /* ­Ó¤H / ¸sÅé ¤ÀÃþ¬ÝªO­pºâµo¤å¼Æ */
+#define COUNT_MAXLOGINS       /* °O¿ý³Ì°ª¤W½u¤H¦¸ */
+
+// ÁÙ½Ð¦³¿³½ì¸Õ¸ÕªºªB¤Í §ì¦^¥hª±ª±§a ¥Ü½d¯¸¥x¦b [1;37;41mtelnet://ats.twbbs.org:6001/[m
+
+--
+¡° [mOrigin: [1;31;40mAtlantis[m  DN: [1;34;40mats.twbbs.org[m  IP: [1;33;40m140.129.66.189[m  ST: [1;32;40matlantis[m

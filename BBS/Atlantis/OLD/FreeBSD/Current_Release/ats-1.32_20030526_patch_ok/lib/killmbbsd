@@ -1,0 +1,2 @@
+#!/bin/sh
+ps -axuwww | awk '$11=="/home/bbs/bin/mbbsd" && $3 > 30.0 {print $2}' | xargs kill -9

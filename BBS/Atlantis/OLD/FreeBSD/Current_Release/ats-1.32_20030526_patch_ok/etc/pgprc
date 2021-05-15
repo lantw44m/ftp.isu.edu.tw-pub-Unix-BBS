@@ -1,0 +1,94 @@
+PATH="$BBSHOME/bin:$BBSHOME/com:/usr/local/bin:/usr/local/snp/bin:/bin:/usr/bin\
+:/usr/games:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/local/sbin:/stand\
+:/usr/local/samba/bin"
+
+export EDITOR=vi
+#export EXINIT='set autoindent'
+export PAGER=less
+export LESSCHARSET=latin1
+export NNTPSERVER=netnews.ntu.edu.tw
+
+LESS=-MM
+
+# I had problems using 'eval tset' instead of 'TERM=', but you might want to
+# try it anyway. I think with the right /etc/termcap it would work great.
+# eval `tset -sQ "$TERM"`
+if [ "$TERM" = "" -o "$TERM" = "unknown" -o "$TERM" = "dumb" -o "$TERM" = "linux" -o \
+ "`echo $TERM | cut -c1-3`" = "con" ]; then
+  TERM=cons25
+fi
+ #PS1='`hostname`:`pwd`# '
+if [ "$SHELL" = "/bin/pdksh" -o "$SHELL" = "/bin/ksh" ]; then
+  PS1="! $ "
+elif [ "$SHELL" = "/bin/zsh" ]; then
+   PS1="%m:%~%# "
+elif [ "$SHELL" = "/bin/ash" ]; then
+    PS1="$ "
+else
+    PS1='\h[PGP.$userid]:\w\$ '
+fi
+PS2='> '
+
+if [ ! "$SHELL" = "/bin/ash" ]; then # ash doesn't have aliases
+#
+# Global aliases - change them to suit your needs.
+#
+alias  a=alias
+#alias  net='term < /dev/modem > /dev/modem 2> /dev/null&'
+alias  c=clear
+alias  h=history
+alias  d=dirs
+alias  em='emacs -r -fn fixed -geometry 100x34 &'
+alias  pd=pushd
+alias  po=popd
+alias  md=mkdir
+alias  3='cd ~/tmp'
+alias  1='cd ~/prj'
+alias  cemacs='emacs -nw -l cemacs'
+alias  ce=cemacs
+alias  emacs='emacs -nw'
+alias  xt='xterm -r -fn 7x14'
+#alias  telnet=ctelnet
+fi
+# alias startx='startx >& /dev/null'
+alias  dir='colorls -F -G'
+alias  ls='linuxls -oF'
+alias  tin='tin -r'
+alias  d2u=dos2unix
+alias  u2d=unix2dos
+alias  sgn='~bbsgn/bin/showuser ~bbsgn/.PASSWDS'
+alias  sgnu='sgn d i h v u'
+alias  fgn='~bbsgn/bin/bfinger'
+alias  fsob='~bbs/bin/bfinger'
+alias  ss='~bbs/bin/showuser ~bbs/.PASSWDS'
+alias  ssu='ss d i h v u'
+alias  mypost='forall ~bbs/boards grep -Fi -A1 "§@ªÌ: woju"'
+alias  sunxcin='xcin -fnb5 taipeik24 -fn 12x24 -in9 Boshiamy.tab'
+alias  suncrxvt='crxvt -fnb5 taipeik24 -font 12x24 -bg black -fg white -ls'
+alias  display='export DISPLAY=$REMOTEHOST:0'
+alias  sgnj='sgn i u j | lsf 17 1 | grep -v woju'
+ignoreeof=10
+export PATH DISPLAY LESS TERM PS1 PS2 ignoreeof
+umask 022
+mesg y
+ulimit -c 0
+cd
+
+if [ ! -d $PGPPATH ]; then
+   mkdir $PGPPATH
+   randgen > $pgpphrase
+   printf "\n\nPhrase[%s] -> %s\n\n" $userid `cat $pgpphrase`
+   pgp -kg
+   if [ ! -f $pgppub ]; then
+      exit
+   fi
+   pgp -kxa $userid plans
+   cat plans >> plans.log
+   mv plans.asc plans
+   pgp -kvc | grep fingerprint | trim >> plans
+   tar cfz pgp.$userid.tgz pgp
+   pgp -kd $userid
+   pgp -kxa $userid pgp.rmkey
+   tar xvfz pgp.$userid.tgz
+   tar cfz pgp.$userid.tgz pgp pgp.phrase pgp.rmkey.asc plans
+fi

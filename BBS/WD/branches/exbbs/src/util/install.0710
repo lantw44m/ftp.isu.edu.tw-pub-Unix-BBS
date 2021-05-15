@@ -1,0 +1,9 @@
+mf1=Makefile
+mf2=Makefile.bak
+mf3=Makefile.0710
+
+cp -f $mf1 $mf2
+cp -f $mf3 $mf1
+make install
+make clean
+cp -f $mf2 $mf1

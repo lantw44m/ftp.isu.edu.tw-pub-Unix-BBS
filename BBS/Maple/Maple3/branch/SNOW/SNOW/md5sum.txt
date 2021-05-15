@@ -1,0 +1,5 @@
+cbcf6678a42ccba24a1756aca4d6c41a  SNOW-v0.67-beta1.tar.gz
+36057672170f3f0c537c20abcabf1cec  SNOW-v0.67-beta2.tar.gz
+21f0bc47aaf2cf0cd44321f94654e36c  SNOW-v0.69-beta1.tar.gz
+98678a4ab1f4248dd69518d3e1cccdba  SNOW-v0.70-beta1.tar.gz
+743a7a21d75c64663570b9d3ba15caad  SNOW-v0.80-release.tar.gz

@@ -1,0 +1,28 @@
+ 作者  itoc.bbs@processor.tfcis.org (:MM:), 信區: itoc
+ 標題  [閒聊] TFCIS.personal.itoc 的精華區
+ 時間  XEON (Thu Dec  5 21:58:51 2002)
+ 轉信  PigHeadPark!news.tfcis.org!PROCESSOR
+
+  http://home.pchome.com.tw/soho/itoc/BBS/theme/itoc-gem-021205.tgz
+
+  抓回去以後，可以放在看板精華區或是個人精華區
+
+  一、放在看板 itoc 的精華區 (原本沒有精華區)
+     % tar xfz itoc-gem-021205.tgz -C ~bbs/tmp/
+     % rm -rf ~bbs/gem/brd/itoc
+     % mv -f ~bbs/tmp/gem ~bbs/gem/brd/itoc
+     上站以後，itoc 板的精華區就有資料了
+
+  二、放在使用者 itoc 的精華區 (原本沒有精華區)
+     % tar xfz itoc-gem-021205.tgz -C ~bbs/tmp/
+     % rm -rf ~bbs/usr/i/itoc/gem
+     % mv -f ~bbs/tmp/gem ~bbs/usr/i/itoc/
+     上站以後，itoc 信箱的精華區就有資料了
+
+  內容有二個部分：
+  (一) 未收錄進標準版的一些功能
+  (二) 更新過的安裝文件
+
+--
+    ╭── Origin ╮ 動力核心  processor.tfcis.org  ～ αβγ ──┼
+    ┼     Author ╯ itoc.Dorm-GD2.NCTU.edu.tw

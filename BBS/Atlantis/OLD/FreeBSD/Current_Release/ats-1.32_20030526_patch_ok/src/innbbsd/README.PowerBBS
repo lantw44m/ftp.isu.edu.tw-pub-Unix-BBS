@@ -1,0 +1,63 @@
+.......................................................................
+
+由於 PowerBBS 只用到 innbbsd 對 Message-ID 的處理, 因此 Make 的步驟如下:
+
+	1. Makefile 中 BBSHOME 與 BBS_SRC 的 Path 設與 PowerBBS 中的 setup.h
+	   中的 SYSTEM_PATH 相同
+
+	2. 執行 make <sys-type>
+	   <sys-type> 請參照原 make 的列表
+
+	3. 由於 PowerBBS 不需 innbbsd 提供的 bbspost 因此 make 到 bbspost
+	   時會因錯誤而停止, 沒有關係, innbbsd 只與 ctlinnbbsd 已 make 出來
+	   了
+
+	4. 將 innbbsd 與 ctlinnbbsd 考到 PowerBBS 的 SYSTEM_PATH 裡
+
+	5. 在 SYSTEM_PATH 下再 mkdir innd
+
+	6. innd 下放下列兩個檔案即可
+
+		bbsname.bbs	(請參照所附的 innd/bbsname.bbs)
+		innbbs.conf	(同樣將原附的 innd/innbbs.conf 拷去就行)
+
+	7. 將 innbbs.conf 中的
+
+		nodelist  local
+		newsfeeds none
+
+	   打開, 就是把前面的 # 拿掉
+
+	8. PowerBBS 的 setup.h 中的 DBZ_CHANNEL 設與 SYSTEM_PATH 同即可
+
+	9. 試執行 innbbsd
+
+	10.若執行有問題則試排除
+
+
+
+注意事項:
+
+	1. 若 innbbsd 要在 rc.local 中被執行, 則必須在 pbbsnnrpd 之前就
+	   執行
+
+	2. 在 rc.local 中執行 innbbsd 要如下:
+
+		(假設您的 SYSTEM_PATH 為 /pbbs)
+
+		if [ -f /pbbs/innd/.innbbsd ]; then
+			rm -f /pbbs/innd/.innbbsd
+		fi
+		echo 'innbbsd'
+		/pbbs/innbbsd
+
+	3. 若要停止 innbbsd 請用 ctlinnbbsd shutdown
+
+	4. 本版與原 innbbsd-0.41 有一處差異, 在 inndchannel.c 中對
+	   connect from 的 log 若以 -DPowerBBS 去 make 的將不會被
+	   log, 由於 PowerBBS 所使用的 innbbsd 只能以 localuser 去
+	   connect 並且 pbbsnnrpd 使用頻繁, 因此 log 此項已無意義,
+	   在此跳過.
+
+
+From Samson

@@ -1,0 +1,39 @@
+§@ªÌ: Dopin (1.31-Stable ¾U·N¶i¦æ¤¤) ¬ÝªO: ATSVersion
+¼ÐÃD: ATS 1.31 Stable Release
+®É¶¡: Tue Sep 17 12:37:52 2002
+
+CVS-Code : ATS_1.31S_00-200209171130
+File     : ftp://ats.twbbs.org/pub/release/FreeBSD/1.31s/ats-1.31_s0.tar.gz
+
+±q B9 ¤½§i¥H¨Ó ³o¨â¤Ñ¦¬¨ì¤F¼Æ¤Q«Ê¨Ó«H Åý­ì¥»·Q³Ý¤f®ðªº§ÚÄY­«ªººÎ¯v¤£¨¬ ^^;;;
+¦ý¥¿¦]°U¦U¦ìªººÖ ¤~¥i¥HÅý³o»ò¦h¿ù»~±o¥H­×¥¿ §Ú¯S¦b¦¹·PÁÂ
+
+¥»ª©¥»¤j·§¬O¤µ¦~©³«eÄÀ¥Xªº³Ì«á¤@­Ó¥¿¦¡ª©¥» ¨ì 1.40 ¥X¨Ó¥H«eÀ³¸Ó¥u·|¦³ patch
+¤½§i ¤£·|¦A¦³¤j§ïª©¤F ²¦³º 1.40 ªº§Þ³N³]©w¹ê¦b«D±`°ª ©ú¦~´H°²«e§Ú¤£¥i¯à¦³®É
+¶¡¥h°Ê¤u ¥Ø«e´N¥ý§i¦¹¤@¬q¸¨ ¥t¥~¦p d ¥S´£¨ìªº cola ÂàÀÉ ¤]¥i¯à­n¹L­Ó´X¤Ñ¤~¦³
+¿ìªk¶}©l°Ê¤u ¯à¤£¯à°µ¥X¨ÓÁÙ¤£ª¾ ¦]¬°§Ú¹ê¦b¨S¦³¬[ cola ªº¥­¥x¥i¥H°µ¹êÅç
+
+¥H¤U¬O¥»ª©¤ñ¸û©ó B9 ªº­×¥¿ (µ´¤j³¡¥÷¤w¦C¦b patch ¤¤)
+1. mbbsd.c ¯¸¥x¿ï¾Ü¿ù»~
+2. mbbsd (talk.c admin.c) ¨Ï¥ÎªÌ¤@Äý / ¨t²ÎºûÅ@¦â½X¦ì²¾¿ù»~
+3. perm.h ³]©w¿ù»~
+4. menu.c movie ¥Ø¿ý«ü¦V¿ù»~ / Row ¼Æ¿ù»~ / ÂIºqºq¥»«ü¦V¿ù»~
+5. board.c ¯¸¥xÅv­­§P©w¿ù»~
+6. admin.c ¶}ªO¿ù»~
+7. dopin.c ÂIºq¤À¯¸¿ù»~
+8. ¨ú®ø menu.c xyz.c ¹ï BBSHOME/Note/ ¥Ø¿ý«ü¦Vªº³B²z ¦¹¥Ø¿ý¥H«á¤£¦s¦b¤£»Ý­n
+
+¥t·s¼W¤F¹ïÀ³¤F TRANS_FROM_FB3 ªº ENCPASSLEN ©w¸q/¤Ï©w¸q (config.h/struct.h)
+¹ï©ó FB3 Âà´«À³¦³À°§U ¤]µy·L­×§ï¤F sob2ats131.c fb2ats131.c
+
+Anyway ... ¯¬¨Ï¥Î´r§Ö ¦A¦¸·PÁÂÀ°¦£ patch ªº¨C­Ó¤H ÁÂÁÂ§A­Ì
+
+--
+SOB 0.22 Atlantis Version 1.31 ¤w©ó¤é«e Release ¥X Stable ª©, ÅwªïÁÙ¬¡¦b Maple
+2.36 SOB Ver. ¦^¾Ð¤¤ªºªB¤Í­Ì¤@°_¨Ó°Q½×¤U¦C¬ÛÃö :
+1. [1;33;40mmaple 2.36[m  2. [1;34;40mSOB[m  3. [1;31;40mAtlantis Version[m
+telnet to ats.twbbs.org   Boardname is ATSVersion
+
+--
+¡° [mOrigin: [1;32;40mAtlantis[m  DN: [1;31;40matlantis.twbbs.org[m  IP  : [1;36;40m140.129.66.189[m
+[0;33;40m¡»[m Term  : [1;33;40mVT100[m     ST: [1;35;40matlantis       [m

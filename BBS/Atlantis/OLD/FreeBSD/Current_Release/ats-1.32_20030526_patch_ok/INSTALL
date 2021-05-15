@@ -1,0 +1,7 @@
+#!/bin/sh
+echo 'Start Compiling files ...'
+cd ~/src/maple ; make update ; cd ../so ; make update
+cd ../cvsup ; make update ; cd ../util ; make update
+cd ../innbbsd ; make bbslink2 ; make freebsd install ; make clean
+cd ~
+echo 'done...'

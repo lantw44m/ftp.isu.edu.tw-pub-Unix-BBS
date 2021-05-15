@@ -1,0 +1,129 @@
+
+<!-- banner start -->
+<script language=JavaScript src=http://home.pchome.com.tw/js/banner.js></script>
+<!-- banner end -->
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=big5">
+<meta http-equiv=Content-Language content=zh-tw>
+<title>MapleBBS 說明文件</title>
+</head>
+
+<body>
+
+<center><table><tr><td><pre>
+
+                       <font color="#008000">★ 轉信設定手冊 ★</font>
+
+  <a href='#0'>Ｏ、轉信基本設定</a>
+  <a href='#1'>一、和 news server 轉信</a>
+  <a href='#2'>二、和 bbs 對轉</a>
+
+
+    本文件是寫給要安裝 itoc 所維護的 bbs 程式版本所使用的，但也適用
+  大部分 bbs 版本。
+
+  <a name='0'></a>
+  <font color="#000080"><u>Ｏ、轉信基本設定</u></font>
+
+    0. 以下全部是用 bbs 的身分執行
+
+    1. 首先先為自己的 BBS 站命名個 token，假設是 WOLF
+
+    2. 編輯 innd/bbsname.bbs，內容就只有 WOLF
+
+    3. 編輯 innd/nodelist.bbs，內容如下：
+       (當然 token/ip/fqdn/full_name 要改成自己的)
+
+# 全部都改完記得跑 innd/ctlinnbbsd reload
+# 用 TAB 來分隔，最後記得空一行
+# name          hostname & domainname                   full name
+#-------        ----------------------------------      ------------
+WOLF            bbs.tnfsh.tn.edu.tw     IHAVE(7777)     與南共舞
+
+    4. crontab -e 加入這二行 (應該原本就有了)
+
+
+# 每小時對其他 BBS 及 news server 送信六次
+8,18,28,38,48,58 * * * * innd/bbslink > /dev/null 2>&1
+
+  <a name='1'></a>
+  <font color="#000080"><u>一、和 news server 轉信</u></font>
+
+   範例：
+     news:   news.tfcis.org      POST(119)
+     group:  TFCIS.personal.itoc
+
+    1. 在 BBS 上 0Admin → NewBoard 開個新板
+
+       看板名稱：itoc
+       看板說明：個人 TFCIS.personal.itoc
+       板主名單：SYSOP
+       閱讀權限：--------------------------------
+       發表權限：---p----------------------------
+       看板屬性：------
+
+       特別注意的是，設定屬性 1 □ 不轉信
+
+    2. 編輯 innd/nodelist.bbs，加到最後一行
+
+TFCIS           news.tfcis.org          POST(119)       台南一中資訊社
+
+    3. 編輯 innd/newsfeeds.bbs，加到最後一行
+
+TFCIS.personal.itoc             itoc            TFCIS   big5
+
+    4. 編輯 innd/TFCIS.active (新檔案)，加入這行
+
+TFCIS.personal.itoc     0000000001      0000000000      y
+
+    5. crontab -e 加入這行
+
+9,39 * * * * innd/bbsnnrp news.tfcis.org /home/bbs/innd/TFCIS.active > /dev/null 2>&1
+
+    6. 執行 innd/reload.sh
+
+    7. 完成
+
+    8. 如果信一直取不進來，而手動執行
+       innd/bbsnnrp news.tfcis.org /home/bbs/innd/TFCIS.active
+       時出現了 no process running, but lock file existed, unlinked 或
+       Segmentation fault (core dumped) 的訊息，這是因為該群組某幾篇文章
+       有問題，此時可以手動執行
+       innd/bbsnnrp -c news.tfcis.org /home/bbs/innd/TFCIS.active
+       只抓之後新的文章就能避免再次掛點了
+
+  <a name='2'></a>
+  <font color="#000080"><u>二、和 bbs 對轉</u></font>
+
+   範例：
+     bbs.abc.com 站的 Math 板轉到自己站上的 Mathematics 板
+     (二站的板名可以不一樣)
+
+    1. 首先二邊先要為這個轉信的看板取一個相同的 group 名字，
+       假設是 abc.math   (group 名字二站要取一樣)
+
+    2. 編輯 innd/nodelist.bbs，加到最後一行
+
+ABC             bbs.abc.com             IHAVE(7777)     ABC站的中文名字
+
+    3. 編輯 innd/newsfeeds.bbs，加到最後一行
+
+abc.math                        Mathematics     ABC     big5
+
+    4. 執行 innd/reload.sh
+
+    5. 完成
+
+    6. 如果信一直送不進來，而手動執行 innd/bbslink
+       時出現了 Segmentation fault (core dumped) 的訊息，此時可以手動執行
+       innd/bbslink -v 看看錯誤訊息再作處理。
+
+--
+                                                    交大電子 杜宇軒
+                               E-Mail: <a href=mailto:itoc.bbs@bbs.tnfsh.tn.edu.tw>itoc.bbs@bbs.tnfsh.tn.edu.tw</a>
+
+</pre></td></tr></table>
+
+</body>
+</html>

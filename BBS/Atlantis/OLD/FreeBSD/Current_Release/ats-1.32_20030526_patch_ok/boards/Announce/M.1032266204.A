@@ -1,0 +1,128 @@
+§@ªÌ: Dopin (1.31-Stable ¾U·N¶i¦æ¤¤) ¬ÝªO: ATSVersion
+¼ÐÃD: [Release] ATS 1.31 Beta 9 ª© «Å§i
+®É¶¡: Sun Sep 15 23:50:04 2002
+
+                                  [1;37;46m»¡¦b«e­±[m
+
+¥»¨Ó¬O·Q­nª½±µ¥H 1.31-Stable ¤§¦WÄÀ¥X ¦ý¬O·Q·Q §ïªºªF¦è¹ê¦b¤Ó¦h¤Ó¦h ¤@­Ó¤H´ú
+¹ê¦b¦³·¥­­ (®É¶¡¬O³Ì¤jªº­­¨î¦]¯À ¶}¾Ç¤F) ÂÎÂÎ·Q¥²¤£¤Ö ©Ò¥HÁÙ¬O©w Beta ÄÀ¥Xª©
+
+Atlantis ±q 0.84 ¥H¨Ó§ï¤F³\¦hªº¥\¯à ¤£¹L¦]¬°§Úªº­Ó©ÊÃö«Y ´X¥G¤j³¡¥÷·s¼Wªº¥\¯à
+³£¬O¦Û¤v¼g ªø´Á³¬ªù³y¨®¥H¨Ó ¶i¨B¹ê¦b¦³­­ Áö»¡¨ì¤F 1.20 ¦³¤F¤À¯¸ªº¥\¯à ¦ý²¦³º
+¤´ÄÝ¹êÅç¤§§@ ¹ê¥Î©Ê¤´µM«Ü®t ¦Ü 1.24 ©Ó GEO ¥S´£¿ô ©Ò¥H§ï¤F¸ê®Æµ²ºc ¨ì¤F 1.30
+¤S¥[¤J¦Û°Ê«Ø¥ß/§R°£¯¸¥xªºµ{¦¡ ³°Äòº¥¦¸§ï¨} ª½¨ì³oª©¥X¨Ó Áö¤£´±»¡¦Û«H¤§§@ ¦ýªº
+½T¤ñ°_ b8 ¥i¿×¶i¨B·¥¤j ¦Ü¦¹¬°¤î¯¸ªº°ò¥»¥\¯à¤~´±»¡ "©|ÄÝ§¹¾ã" ¦b³oÃä¯uªº­n·PÁÂ
+«D±`«D±`¦hªº¤H ...
+
+(¨Ì»{ÃÑ¥ý«á)
+shiori ¥S (cyce.twbbs.org) : Áö»¡¥L¨Ã¨S¦³¤@ª½¨Ï¥Î ATS Version ¦ý±q 0.82 ¥H¨Ó
+³°³°ÄòÄò´£¨Ñ¨ä¥L BBS ª©¥»ªº·s¥\¯à»P¯S¦â µM«á§Ú¦b¨Ì¥Lªº¤å¦r»¡©ú ¥h "³Ð¥X" ¹ïÀ³
+ªºµ{¦¡½X ¨È¯¸ªº¥\¯à¯à°÷¤£Â_¼W¥[ ­º­n·PÁÂªº¬O¥L
+
+drange ¥S (tribe.twbbs.org) : ±q 1.20a ¶}©l´N¨Ï¥Î ATS, ¨ä¹ê¥H¥LªºµwÅé¤lµ{¦¡¥\
+¤O ²{¦b¦³§ó¦h¦nªº¿ï¾Ü ¦ý¥L«o¦b§ÚªÅ¥Õ¨S¦³»{¯u patch ªº¤@¦~¦h¥H¨Ó ¨S¦³§ó´«¹L¥ô
+¦ó¨ä¥Lª©¥» ¥ú¬O¹ï¥L¤@­Ó¤Hªº¸q®ð §Ú´Nµ´¹ï­È±oÀ°¥L¦A¥Í¥X§ó¦nªºª©¥» News Âà«H¾a
+¥LªººûÅ@ Åý¶V¨Ó¶V¦hªºªB¤Í¥i¥H¤F¸Ñ ATS ¥\¯à¯S¦â ¥i¥H¦p¬O»¡ ¨S¦³ tribe BBS ´N¨S
+¦³ ATS 1.30 ªº½Ï¥Í ¨S¦³¤F¥L ATS-R ª©¤£·|¦³¤µ¤Ñ §Ú°J¤ßªº·PÁÂ d ¥S
+
+shakalaca ¥S (php.twbbs.org) : WD ªº¶}µoªÌ¤§¤@ ¥L¹ï BBS ªº¼ö¸Û»P·Qªk ±Òµo¤F§Ú
+³\¦hªºÆ[ÂI ¦]¬°¥Lªº³\¦h·N¨£ §Ú¤~¯à±q¥u¬¡¦b¦Û§Úªº¶H¤ú¶ð¤¤§âÄ²¨¤¦ù¦V¨ä¥L BBS ªº
+¥@¬É ¤]¦]¦¹§Ú¹ï©ó¯¸ªº³]­p ¤~·|¥[¤J³\¦h¥~±¾ªº³¡¥÷ ¤×¨ä¬O¥L©ÒºûÅ@ªº ftp ¦øªA¾¹
+(ftp://php.twbbs.org/pub/bbs/) ¦¬¿ýªº¦U®aª©¥»ªº BBS Åý³\¦h­WµL¦a¤è§ì¨úµ{¦¡ªº
+¤H ¦³¤@­Ó¥i¥H°Ñ·Óªº¦n¦a¤è ³\¦hµ{¦¡½X §Ú³£¬O§ì¦Û¦¹¨Ó¬ã¨s
+
+rexchen ¥S (loyal.ee.tku.edu.tw) : ¤Ñ¤õªº­ì§@ªÌ »{ÃÑ¥LÅý§Ú¹ï ATS ªº¥¼¨Ó¦³¤F³W
+¹º Á|¤Z mbbsd ªº«O¯d ¼Ò²Õ¤Æ(²{¦b©|µLªk¹F¨ì) ¥ý¶iªº±b¸¹ºÞ²z·§©À BBS ¯¸¬[ºc¨«¦V
+¤D¦Ü¦UºØµ{¦¡«äºû ¨ü¯q·¥¤j ¥»ª©·¥ºÝ½ÆÂø§¹¾ãªº¥¨¶°©w¸q¥\¯à ¨Ó¦Û R ¥Sªº«ü¾É ¨Ï±o
+ATS ¥i¥H§ó¤è«Kªº²Å¦X¤£¦P¯¸ªº»Ý¨D
+
+LAW ¥S (hcu.twbbs.org) : ¤S¤@­Ó¥Í©R¤¤¹J¨ìªº¶Q¤H ¥L¯à°÷¿ï¾Ü¨Ï¥Î ATS 1.30 ¹ê¦b¬O
+¨È¯¸¤§ºÖ °£¤F¥L¥R¥÷¤F¸Ñ SOB ¯S©Ê¥~ hcu ¯¸¤¤ªº Snow, IJ, Eros µ¥´X¦ì§ó¬O°£ÂÎ°ª
+¤â ±N­ì¥»¹ê¦b¬OÂÎÂÎº¡¦aªº¨È¯¸ ºCºCªº­×¥¿ 1.31b1 ¶}©l ¨ì³oª© ´X¥G 80% ¥H¤Wªº§ó
+·s ³£¨Ó¦Û¥L­Ìªºµ{¦¡½X­×¥¿»Pµ{¦¡«ØÄ³ ¦P¼Ëªº¸Ü¦A®M¥Î¤@¦¸ ¨S¦³ hcu BBS ´N¨S¦³ ATS
+1.31
+
+¨ä¥L©Ò¦³¤ä«ù¨È¯¸ªºªB¤Í ¤]¤@°_ÁÂÁÂ§A­Ì
+
+                                  [1;37;41m¥»ª©·s¼W¥\¯à[m
+¨t²Î¤è­±§ó·s:
+1. ATSVersion ª©¤W¥Ø«e©Ò¦³¤½§iªºµ{¦¡­×¥¿
+2. §¹¾ãªº©w¸q¥\¯à
+3. ¤º«Ø SOB/FB3 Âà´«
+4. ¦Û¥Ñ°ð©w¸q        -
+5. ¯¸¥xÁôÂÃ          |- ³o¤T­Ó·f°t°_¨Ó­ì¨Óªº¯¸¥x¥\¯à´N¬O 90% KKcity ¯¸¥x¥\¯à
+6. ¯¸¥x/¨t²ÎºûÅ@¤u¨ã -
+7. ¨Ï¥ÎªÌ/¬ÝªOÅv­­/³ß¦n³]©w Äæ¦ìÂX¥R¦Ü 32 ­Ó
+8. zbbsd / mbbsd ¦@¥Î/¿W¥ß ¨Ï¥Î¬Ò¥i
+
+·s¼W¥\¯à:
+1. ¤å³¹¼ÐÃDÃþ§O
+2. ±ÀÂË¤å³¹®É¥[¤W·N¨£¥\¯à
+3. ³s¸p¨t²Î¤º«Øµ{¦¡
+4. ¯µ±K¶i¤J¥\¯à (¤£¦P©ó­ì¥ý¯µ±K¬ÝªO ¬O¬ÝªO¦Cªí¥iµø ¦ý¶i¤J®É·|ÀË¬d¦W³æ
+                 ¥t¥i³]©w¬O§_¥i¥H¾A¥Î±ø´Ú¦P·N®Ñ)
+5. ¦W³æ¤W­­ÀË¬d¥\¯à
+
+¥~±¾¤è­± (­×§ï¦¨¨È¯¸¾A¥Î code):
+1. ²Å¸¹¤u¨ã ­ì§@ªÌ weichung (bbs.ntit.edu.tw)
+2. Ä¶¨å³q «È¤áºÝ ­ì§@ªÌ statue (bbs.yzu.edu.tw)
+3. ¬PªÅ¾Ô°«Âû chyiuan (great.dorm12.nctu.edu.tw) [¥Dµo®i]
+   dsyan, fennet, tiball, wildcat, Frank, startrek µ¥¦h¦ì
+   ¹ÏÀÉ­ì§@ªÌ tiball (bbs.nhctc.edu.tw)
+
+                                  [1;37;42m¶}©l¬[¯¸[m
+
+Â²³æ¬[¯¸¨BÆJ  §ÚÁÙ¬O»¡¤@¤U ¤ñ¸û¤£¦Pªº´N¬O¦b©ó SOB, FB3 ¤§ÂàÀÉ (ÁÙ¬O FreeBSD)
+(# ªí root %(©Î$) ªí user §Ú·Q³o­Ó¬O±`ÃÑ
+
+# vipw ¥[¤J bbsrs, bbsrsadm ; uid ¬° 9997 ; gid ¬° 97
+  (¦p»Ý­n§ó§ï ½Ð§ó§ï config.h ³]©w ¸Ô²Ó³]©w½Ð°Ñ¦ÒÂÂª©ÄÀ¥X¤å¥ó)
+# cd /home
+# ¦Ü ftp://ats.twbbs.org/pub/release/FreeBSD/1.31s/ §ì¨úÀÉ®×
+  ¥Ø«e¬° ats-1.31_b9.tar.gz
+# tar xfz ats-1.31_b9.tar.gz (¸Ñ¶}¦¨¬° bbsrs ¥Ø¿ý ÂÂª© ATS ½Ð¤Åª½±µ¸Ñ¶})
+# chown -R bbsrs bbsrs ; chgrp -R bbsrs bbsrs ; su bbsrsadm
+
+% cd ~/src/maple
+% ve config.h (½Ð "½T¹ê¨Ì·Ó±zªºª¬ªp§ó§ï ¤Å©w¸q¿ù»~ ¥H§K¥X°ÝÃD)
+% ve perm.h (©w¸q¬O§_­n¨Ï¥Î "³Ì¤pÅv­­" ¦pªG©w¸q «h¹w³]Åv­­¥u¦³ PERM_BASIC)
+  (#undef LEAST_PERM_DEFAULT    /* (ºc·QªÌ : ErOs (hcu.twbbs.org) */)
+% make ; make update (¥»ª©¥H«á¤£ªþ¨t²Î°õ¦æÀÉ ³£»Ý½sÄ¶¤è¥i¨Ï¥Î)
+% cd ../util ; make ; make update
+
+(¦p»ÝÂà´«¯¸¥x)
+% ve sob2ats131.c (©Î fb2ats131.c) ½Ð½T¹êÀË¬d·sÂÂ¯¸¤§¸ê®Æµ²ºc »PÀÉ®×©w¸q
+% make sob2ats131.c (©Î fb2ats131.c)
+% exit
+
+# cd /home/ ; bbsrs/src/util/sob2ats131 (©Î fb2ats131)
+# su bbsrsadm                        -|
+% cd ~/stfiles ; ve atlantis.h (§ï¦¨§A­nªº¸s²Õ¤ÀÃþ)
+% cd ~/run/ ; ve atlantis.sysop (§ï¦¨§A¯¸ªº¯¸ºÞ¼Æ) ; ve atlantis.sysop_name
+  (§ï¦¨§A¯¸¤Wªº¯¸ºÞ¸ê®Æ ®æ¦¡¬°¤@­Ó ID ¤@¦æ ¨Ã»Ý·f°t PERM_BOARD (¤À¯¸¯¸ªø)
+  Åv­­¤è¯à¥¿±`°õ¦æ ¹w³]¯¸³Ì¦n¥uµ¹¨ã SYSOP ªº·í¯¸ªø))
+% cd ~/src/maple ; make clean update -|- ¦¹¤G¨BÆJ¹ï©ó¬O FB3.0 ªº¯¸¥x¬O¥²»Ýªº
+(¨ì³o¸Ì)
+
+(¦pªG­n¶]Âà«H)
+% cd ~/innd ½s bbsname.bbs newsfeeds.bbs nodelist.bbs ³o¤T­ÓÀÉ »P¹ïÀ³ active
+% cd ~/src/innbbsd ; make clean freebsd clean ; make install ; cd ~/innd
+% ./ctlinnbbsd reload
+(¨ì³o¸Ì)
+
+% crontab -e (½Ð¨Ì¹ê»Úª¬ªp¶])
+% exit
+
+# ipcrm -M ²M±¼½Ä¬ðªº SHM (©Î¬O­«¶}¾÷¥ç¥i)
+# su bbsrs ´ú¸Õ¯¸¥x¶i¤J ¦p¦³¯¸¥xÂà´« »Ý¤â°Ê§ï¨Ç³]©w «Ý¤@¤Á OK «á... ¦A¨Ì±zªº
+  ª¬ªp¨M©w­n¨Ï¥Î zbbsd (­ì in.zbbsd) ©Î¬O mbbsd ¨Ã±N¨ä³]©w¤J rc.local
+
+--
+SOB 0.22 Atlantis Version 1.31 ¤w©ó¤é«e Release ¥X Beta ª©, ÅwªïÁÙ¬¡¦b Maple
+2.36 SOB Ver. ¦^¾Ð¤¤ªºªB¤Í­Ì¤@°_¨Ó°Q½×¤U¦C¬ÛÃö :
+1. [1;33;40mmaple 2.36[m  2. [1;34;40mSOB[m  3. [1;31;40mAtlantis Version[m
+telnet to ats.twbbs.org   Boardname is ATSVersion
+
+--
+¡° [mOrigin: [1;32;40mAtlantis[m  DN: [1;31;40matlantis.twbbs.org[m  IP  : [1;36;40m140.129.66.189[m
+[0;33;40m¡»[m Term  : [1;33;40mVT100[m     ST: [1;35;40matlantis       [m

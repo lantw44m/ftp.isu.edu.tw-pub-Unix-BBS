@@ -1,0 +1,25 @@
+#!/bin/sh
+# Editor : drange.bbs@tribe.twbbs.org
+
+case "$1" in
+
+showpid)
+  more /home/bbsrs/run/mbbsd.pid
+  ;;
+
+stop)
+  kill -9 $2
+  ;;
+
+restart)
+  kill -9 $2
+  rm -f /home/bbsrs/run/mbbsd.pid
+  /home/bbsrs/bin/mbbsd
+  ;;
+
+*)
+  echo "Usage: bbsctl <showpid/restart/stop> [PID]"
+  ;;
+
+esac
+exit 0

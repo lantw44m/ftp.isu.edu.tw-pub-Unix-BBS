@@ -1,0 +1,19 @@
+static struct commands classatlantislist[] = {
+
+board, 0, "00BBS 系統           [本站]", 0,
+board, 0, "11火鳥系統           [FPUG][版本][BUGS]", 0,
+board, 0, "22電腦技術           [電腦][系統][網路]", 0,
+board, 0, "33學術科學           [文商][理工][學術]", 0,
+board, 0, "44藝術文化           [文藝][藝術]", 0,
+board, 0, "55人文社會           [團體][宗教]", 0,
+board, 0, "66體育休閒           [體育][休閒]", 0,
+board, 0, "77知性感性           [閒聊][感性]", 0,
+board, 0, "88新聞時事           [新聞]", 0,
+Favor, PERM_BASIC, "FFavor               我的最愛", 0,
+Boards, 0,         "BBoards ────┬─ 所有看板", 0,
+New, 0,            "NNew            ├─ 閱\讀所有新作品", 0,
+Post, PERM_POST,   "PPost           ├─ 發表文章", 0,
+Read, 0,           "RRead           ├─ 閱\讀文章", 0,
+Select, 0,         "SSelect         └─ 選擇看板", 0,
+
+NULL, 0, NULL};

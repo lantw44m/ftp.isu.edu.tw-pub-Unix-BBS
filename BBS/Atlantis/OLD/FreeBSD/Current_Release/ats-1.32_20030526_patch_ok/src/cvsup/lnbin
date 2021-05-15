@@ -1,0 +1,6 @@
+#/bin/sh
+bbsuser=$1
+shift
+for filename
+   do sh -c "ln -s /home/$bbsuser/src/util/$filename /home/$bbsuser/bin"
+done
